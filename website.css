@@ -2,18 +2,15 @@ html {
     scroll-behavior: smooth;
 }
 
-:root {
-    --main-bg-color: rgb(254, 251, 247);
-}
-
 /* General */
-body {
-    background-color: var(--main-bg-color);
+* {
     margin: 0;
 }
 
 /* Fonts */
-body, h1, .navigation a {
+body,
+h1,
+.navigation a {
     font-family: Quicksand, Arial;
 }
 
@@ -23,7 +20,14 @@ p {
 
 .container {
     max-width: 100%;
-    padding: 0 16px 16px 16px;
+    background: rgb(254, 251, 247) url(assets/imgs/background.png) no-repeat center top;
+    background-size: calc(100% - 64px) auto;
+    padding: 0 32px 32px 32px;
+    /* top right bottom left */
+}
+
+.background-img {
+    background-image: url(assets/imgs/background.png);
 }
 
 h1 {
@@ -36,13 +40,13 @@ h1 {
 
 /* Header */
 .header {
-    background-color: var(--main-bg-color);
+    background: rgb(254, 251, 247);
     position: fixed;
     top: 0;
     padding-top: 16px;
     height: 60px;
-    left: 16px;
-    right: 16px;
+    left: 32px;
+    right: 32px;
     display: flex;
     align-items: center;
 }
@@ -50,10 +54,6 @@ h1 {
 .header-logo {
     height: 60px;
     margin-right: 32px;
-}
-
-.header-logo:hover {
-    opacity: 0.5;;
 }
 
 .navigation {
@@ -65,18 +65,29 @@ h1 {
 .navigation a {
     display: inline-block;
     color: #c35a80;
-    font-weight: 450;
+    font-weight: 550;
     margin-right: 16px;
     text-decoration: none;
+
+    /* underline */
+    background-image: linear-gradient(#ffd6e5 0%, #ffd6e5 100%);
+    border-radius: 8px 8px 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 0.25em;
+    padding-right: 12px;
+    padding-left: 12px;
+    background-position: 0px 100%;
+    transition: background-size 0.2s ease-in;
 }
 
 .navigation a:hover {
-    color: #ffd6e5;
+    /* background-color: #ffd6e5; */
+    background-size: 100% 100%;
 }
 
-.header-logo
-.navigation a,
-.contact-icons {
+/* hover transition */
+.header-logo .navigation a,
+.contact-info img {
     transition: 0.15s;
 }
 
@@ -89,7 +100,7 @@ h1 {
     overflow: hidden;
 }
 
-.contact-icons {
+.contact-info img {
     display: flex;
     align-items: center;
     border: none;
@@ -99,8 +110,9 @@ h1 {
     filter: invert(72%) sepia(30%) saturate(5729%) hue-rotate(299deg) brightness(79%) contrast(92%);
 }
 
-.contact-icons:hover {
-    filter: invert(88%) sepia(51%) saturate(1537%) hue-rotate(287deg) brightness(118%) contrast(111%);
+.contact-info img:hover {
+    /* filter: invert(88%) sepia(51%) saturate(1537%) hue-rotate(287deg) brightness(118%) contrast(111%); */
+    height: 32px;
 }
 
 /* Projects */
