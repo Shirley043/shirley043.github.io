@@ -4,24 +4,21 @@ html {
 
 /* General */
 * {
+    padding: 0;
     margin: 0;
 }
 
-/* Fonts */
-body,
-h1,
-.navigation a {
+body {
+    background: rgb(254, 251, 247);
     font-family: Quicksand, Arial;
 }
 
 p {
-    font-family: Fira Code, Arial;
+    font: 16px/1.5 "Fira Code", Arial;
 }
 
 .container {
     max-width: 100%;
-    background: rgb(254, 251, 247) url(assets/imgs/background.png) no-repeat center top;
-    background-size: calc(100% - 64px) auto;
     padding: 0 32px 32px 32px;
     /* top right bottom left */
 }
@@ -34,21 +31,20 @@ h1 {
     padding-top: 76px;
     font-weight: 500;
     font-size: 36px;
-    margin: 0;
 }
 
 
 /* Header */
 .header {
-    background: rgb(254, 251, 247);
+    background: #fff5f8;
     position: fixed;
     top: 0;
-    padding-top: 16px;
-    height: 60px;
-    left: 32px;
-    right: 32px;
+    padding: 16px 32px 8px 32px;
+    height: 64px;
+    width: 100%;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .header-logo {
@@ -97,7 +93,7 @@ h1 {
     flex: 1;
     align-items: center;
     justify-content: flex-end;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .contact-info img {
@@ -107,16 +103,17 @@ h1 {
     background-color: transparent;
     margin-left: 16px;
     height: 24px;
+    /* width: 24px; */
     filter: invert(72%) sepia(30%) saturate(5729%) hue-rotate(299deg) brightness(79%) contrast(92%);
 }
 
 .contact-info img:hover {
     /* filter: invert(88%) sepia(51%) saturate(1537%) hue-rotate(287deg) brightness(118%) contrast(111%); */
-    height: 32px;
+    transform: scale(1.25)
 }
 
 /* Projects */
-.project-container {
+.project {
     display: flex;
     flex: 1;
     column-gap: 32px;
@@ -124,11 +121,12 @@ h1 {
     justify-content: space-between;
 }
 
-.project-img {
+.project img {
     width: 100%;
+    /* height: 300px; */
 }
 
-.project-title {
+.project h4 {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
