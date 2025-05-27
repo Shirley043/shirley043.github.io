@@ -121,10 +121,6 @@ li {
 
 
 /* Projects */
-.work h1 {
-    /* font-family: Quicksand, Arial; */
-
-}
 
 .works {
     display: flex;
@@ -132,6 +128,11 @@ li {
     column-gap: 32px;
     row-gap: 32px;
     justify-content: space-between;
+}
+
+.works a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .works img {
