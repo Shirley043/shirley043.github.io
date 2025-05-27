@@ -8,6 +8,12 @@ html {
     margin: 0;
 }
 
+h2 {
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
 body {
     background: rgb(254, 251, 247);
     font-family: Quicksand, Arial;
@@ -97,27 +103,29 @@ li {
 .about {
     display: flex;
     align-items: end;
-}
-
-
-.about h2 {
-    padding-top: 144px;
-    padding-left: 16px;
-    font-weight: 500;
-    font-size: 36px;
+    padding: 144px 0 144px 0;
 }
 
 .about h1 {
-    /* padding-top: 16px; */
-    padding: 16px 0 16px 0;
+    padding: 0 0 16px 0;
     font-family: Ephesis, Arial;
     font-weight: 400;
     font-size: 144px;
     line-height: 1;
 }
 
+.about p {
+    margin-left: 36px;
+    margin-bottom: 36px;
+}
+
 
 /* Projects */
+.work h1 {
+    /* font-family: Quicksand, Arial; */
+
+}
+
 .works {
     display: flex;
     flex: 1;
