@@ -17,6 +17,7 @@ h2 {
 body {
     background: rgb(254, 251, 247);
     font-family: Quicksand, Arial;
+    padding-bottom: 64px;
 }
 
 p {
@@ -143,6 +144,10 @@ header {
     width: 75%;
     background-color: #fefbf7;
     transition: all 0.3s ease;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 24px;
 }
 
 /* Added styles for tech bubbles inside .work-display */
@@ -161,6 +166,7 @@ header {
     color: rgb(195, 90, 128);
     transition: opacity 0.3s ease;
     transform-origin: left center;
+    cursor: pointer;
 }
 
 .work-list li:hover {
@@ -172,31 +178,63 @@ header {
     filter: blur(1.5px);
 }
 
-
-/* .works {
-    display: flex;
-    flex: 1;
-    column-gap: 32px;
-    row-gap: 32px;
-    justify-content: space-between;
-}
-
-.works a {
+.project-card-link {
     text-decoration: none;
     color: inherit;
 }
 
-.works img {
-    width: 100%;
+.project-card {
+    border-radius: 12px;
+    /* overflow: hidden; */
+    box-shadow: 0 4px 12px rgba(195, 90, 128, 0.5);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.works h4 {
-    font-size: 20px;
+.project-image {
+    max-width: 50%;
+    height: auto;
+    max-height: 300px;
+    display: block;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.project-content {
+    padding: 0 24px;
+}
+
+.project-category {
+    color: rgb(195, 90, 128);
     font-weight: 600;
-    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
 }
 
-.project-des {
+.project-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.project-description {
     font-size: 16px;
-    font-weight: 400;
-} */
+    color: #4b5563;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-bubble {
+    background-color: rgb(255, 214, 229);
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 14px;
+}

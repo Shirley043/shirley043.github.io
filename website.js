@@ -1,8 +1,8 @@
 const projects = {
     hydrosustain: {
         title: "HydroSustain",
-        category: "Interactive System Design",
-        tech: ["Adrino", "Laser Cutting"],
+        category: "Sustainable Product Design",
+        skills: ["Arduino", "Laser Cutting"],
         description:
             "An integrated hydroponic and dehumidification system for sustainable indoor plant cultivation.",
         image: "assets/imgs/HydroSustain.png",
@@ -10,8 +10,8 @@ const projects = {
     },
     inksight: {
         title: "InkSight",
-        category: "Extended Reality Prototype",
-        tech: ["Unity", "Figma", "ShapesXR"],
+        category: "User Research & XR Prototype",
+        skills: ["Unity", "Figma", "ShapesXR"],
         description:
             "An interactive XR reading prototype designed to enhance comprehension and user engagement.",
         image: "assets/imgs/InkSight.png",
@@ -19,8 +19,8 @@ const projects = {
     },
     hypertrack: {
         title: "HyperTrack",
-        category: "Mobile Application Design",
-        tech: ["Figma"],
+        category: "Health-Focused App Design",
+        skills: ["Figma"],
         description:
             "A self-monitoring app for hypertension patients that supports behavior change.",
         image: "assets/imgs/HyperTrack.png",
@@ -28,8 +28,8 @@ const projects = {
     },
     fadedsoul: {
         title: "FadedSoul",
-        category: "Game Design",
-        tech: ["Unity"],
+        category: "3D Game Development",
+        skills: ["Unity"],
         description:
             "A third-person 3D platformer game with immersive particle systems and custom shaders.",
         image: "assets/imgs/FadedSoul.png",
@@ -47,28 +47,21 @@ document.addEventListener("DOMContentLoaded", function () {
             const project = projects[key];
 
             if (project) {
-                workDisplay.innerHTML = `
-                <a href="${project.link}" target="_blank" style="text-decoration: none; color: inherit;">
-                  <div style="
-                    border-radius: 12px;
-                    overflow: hidden;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-                    background-color: #fff;
-                  ">
-                    <div style="background-color: #e6f0ff; padding: 40px 0; text-align: center;">
-                                            <img src="${project.image}" alt="${project.title}" style="width: 100%; object-fit: cover;" />
-                    </div>
-                    <div style="padding: 24px;">
-                      <p style="color:rgb(195, 90, 128); font-weight: 600; font-size: 14px; letter-spacing: 0.5px; margin-bottom: 8px;">${project.category}</p>
-                      <h3 style="font-size: 22px; font-weight: bold; margin-bottom: 12px; color: #1e293b;">${project.title}</h3>
-                      <p style="font-size: 16px; color: #4b5563; margin-bottom: 20px;">${project.description}</p>
-                      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                        ${project.tech.map(tech => `<span style="background-color: rgb(255, 214, 229); padding: 4px 10px; border-radius: 16px; font-size: 14px;">${tech}</span>`).join('')}
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              `;
+                workDisplay.innerHTML = `   
+        <a href="${project.link}" target="_blank" class="project-card-link">
+      <div class="project-card">
+        <img src="${project.image}" alt="${project.title}" class="project-image" />
+        <div class="project-content">
+          <p class="project-category">${project.category}</p>
+          <h3 class="project-title">${project.title}</h3>
+          <p class="project-description">${project.description}</p>
+          <div class="project-skills">
+            ${project.skills.map(skills => `<span class="skills-bubble">${skills}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+    </a>
+  `;
             }
         });
     });
