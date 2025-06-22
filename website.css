@@ -132,6 +132,7 @@ header {
 /* Projects */
 .works {
     display: flex;
+    gap: 32px;
 }
 
 .work-list {
@@ -142,6 +143,17 @@ header {
     width: 75%;
     background-color: #fefbf7;
     transition: all 0.3s ease;
+}
+
+/* Added styles for tech bubbles inside .work-display */
+.work-display span {
+    background-color: rgb(255, 214, 229);
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 14px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
 }
 
 .work-list li {
