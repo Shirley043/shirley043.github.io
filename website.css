@@ -8,6 +8,8 @@ html {
     margin: 0;
 }
 
+
+
 h2 {
     font-weight: 500;
     font-size: 36px;
@@ -107,6 +109,8 @@ header {
     /* filter: invert(88%) sepia(51%) saturate(1537%) hue-rotate(287deg) brightness(118%) contrast(111%); */
     transform: scale(1.25)
 }
+
+
 
 .about {
     display: flex;
