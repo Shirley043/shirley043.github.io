@@ -17,15 +17,7 @@ const projects = {
         image: "assets/imgs/InkSight.png",
         link: "https://www.behance.net/gallery/210934825/InkSight",
     },
-    hypertrack: {
-        title: "HyperTrack",
-        category: "Health-Focused App Design",
-        skills: ["Figma"],
-        description:
-            "A self-monitoring app for hypertension patients that supports behavior change.",
-        image: "assets/imgs/HyperTrack.png",
-        link: "https://www.behance.net/gallery/219798105/HyperTrack",
-    },
+
     fadedsoul: {
         title: "FadedSoul",
         category: "3D Game Development",
@@ -35,6 +27,28 @@ const projects = {
         image: "assets/imgs/FadedSoul.png",
         link: "https://feit-comp30019.github.io/2024s2/#/preview/play-station/2/364327ada9aedeaa09cf7fa91292a8de32c46e05",
     },
+
+    hypertrack: {
+        title: "HyperTrack",
+        category: "Health-Focused App Design",
+        skills: ["Figma"],
+        description:
+            "A self-monitoring app for hypertension patients that supports behavior change.",
+        image: "assets/imgs/HyperTrack.png",
+        link: "https://www.behance.net/gallery/219798105/HyperTrack",
+    },
+
+    studyhub: {
+        title: "StudyHub",
+        category: "Service Design",
+        skills: ["WCAG", "Sketch", "Miro", "Voiceflow"],
+        description:
+            "An inclusive service designed to empower students with confidence and foster meaningful peer interactions.",
+        image: "assets/imgs/StudyHub.png",
+        link: "https://www.canva.com/design/DAGGaAuR8Z8/nM7iaGxZanvkQcaPZCZveg/view?utm_content=DAGGaAuR8Z8&utm_campaign=designshare&utm_medium=link&utm_source=editor#1",
+    },
+
+
 };
 
 document.addEventListener("DOMContentLoaded", function () {
